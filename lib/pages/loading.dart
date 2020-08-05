@@ -19,7 +19,10 @@ class _LoadingState extends State<Loading> {
             Navigator.pushNamed(context, "/home");
           });
         });
-      }
+      } else
+        Future.delayed(Duration(seconds: 2)).then((value) {
+          Navigator.pushNamed(context, "/signIn");
+        });
     });
   }
 

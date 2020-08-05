@@ -43,7 +43,7 @@ class DataBaseMethods {
   }
 
   getConversationMessages(String chatRoomId) async {
-    return await Firestore.instance
+    return Firestore.instance
         .collection("ChatRoom")
         .document(chatRoomId)
         .collection("chats")
